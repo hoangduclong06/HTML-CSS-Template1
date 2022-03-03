@@ -10,6 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="variables.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap"
@@ -23,23 +24,83 @@
         <div class="nav_list">
           <nav>
             <ul class="nav_links">
-              <li class="nav_active_li">
+               <li class="nav_active_li nav_active_li_1">
                 <a href="#">Home</a>
                 <i class="fa fa-chevron-down"></i>
+                <ul class="dropdown_menu">
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Demo - Headphone</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Demo - Watch</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Demo - Shoes</a>
+                  </li>
+                </ul>
               </li>
               <li><a href="#">About Us</a></li>
-              <li>
+              <li class="nav_active_li_1" >
                 <a href="#">Shop</a>
                 <i class="fa fa-chevron-down"></i>
+                <ul class="dropdown_menu">
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Shop Layout</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Shop Details</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Wishlists</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Cart</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Checkout</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Track Oder</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">User Pages</a>
+                  </li>
+                </ul>
               </li>
-              <li>
+              <li class="nav_active_li_1">
                 <a href="#">Pages</a>
                 <i class="fa fa-chevron-down"></i>
+                <ul class="dropdown_menu">
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">FAQ</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Testimonials</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Terms of Service</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Privacy Policy</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">404 Error Page</a>
+                  </li>
+                  
+                </ul>
               </li>
-              <li>
+              <li class="nav_active_li_1">
                 <a href="#">Block</a>
                 <i class="fa fa-chevron-down"></i>
-              </li>
+                <ul class="dropdown_menu">
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Block Layout</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="a" class="nav_item_link">Single Blog</a>
+                  </li>
+                </ul>
+              </li class="nav_active_li_1">
               <li><a href="#">Contact Us</a></li>
             </ul>
           </nav>
@@ -80,15 +141,11 @@
       </div>
     </div>
     <div class="feature">
-      <div class="feature_container">
+      <div class="container">
         <div class="feature_event">
           <div class="feature_event_1">
             <div class="feature_event_icon">
-              <img
-                src="Image/feature1.png"
-                alt="diamond"
-                class="feature_event_icon_diamond"
-              />
+              <i class="fa fa-diamond"></i>
             </div>
             <h2 class="feature_event_content">Premium Quality</h2>
             <p class="feature_event_desc">
@@ -98,11 +155,7 @@
           </div>
           <div class="feature_event_1">
             <div class="feature_event_icon">
-              <img
-                src="Image/feature1.png"
-                alt="diamond"
-                class="feature_event_icon_diamond"
-              />
+              <i class="fa fa-diamond"></i>
             </div>
             <h2 class="feature_event_content">Flexible To Wear</h2>
             <p class="feature_event_desc">
@@ -112,11 +165,7 @@
           </div>
           <div class="feature_event_1">
             <div class="feature_event_icon">
-              <img
-                src="Image/feature1.png"
-                alt="diamond"
-                class="feature_event_icon_diamond"
-              />
+              <i class="fa fa-diamond"></i>
             </div>
             <h2 class="feature_event_content">Long Lasting</h2>
             <p class="feature_event_desc">
@@ -133,7 +182,7 @@
           <img src="Image/anh1.jpg" alt="" class="img" />
         </div>
         <div class="about_wrap_content">
-          <p class="about_wrap_content_text1">ABOUT US</p>
+          <p class="about_wrap_content_text1">ABOUT US <span class="about_wrap_content_text1_bg"></span></p>
           <h1 class="about_wrap_content_h1">
             Our Shoes Are Smooth And Nice With New Flavour
           </h1>
@@ -233,7 +282,7 @@
     <div class="offer">
       <div class="offer_container">
         <div class="offer_container_info">
-          <p class="offer_container_info_text1">SPECIAL OFFER</p>
+          <p class="offer_container_info_title"> <span class="offer_container_info_text1"> SPECIAL OFFER <span class="about_wrap_content_text1_bg bg2"></span></span></p>
           <h1 class="offer_container_info_h1">Discount 50% Off</h1>
           <p class="offer_container_info_text2">
             Contrary to popular belief, Lorem Ipsum is not simply random text.
@@ -254,7 +303,7 @@
       <div class="container">
         <div class="product_wrap_container">
           <div class="product_wrap_content">
-            <p class="offer_container_info_text1">NEW ARRIVALS</p>
+            <p class="offer_container_info_title"> <span class="offer_container_info_text1"> SPECIAL OFFER <span class="about_wrap_content_text1_bg bg2"></span></span></p>
             <h1 class="offer_container_info_h1">Our Latest Products</h1>
           </div>
           <div class="product_wrap_slide">
@@ -271,6 +320,23 @@
                   <i class="fa fa-star"></i>
                   <p class="point_rating">4.00</p>
                 </div>
+                <ul class="product_options">
+                  <li class="product_options_li">
+                    <button class="product_options_btn">
+                      <i class="fa fa-eye"></i>
+                    </button>
+                  </li>
+                  <li class="product_options_li">
+                    <button class="product_options_btn">
+                      <i class="fa fa-shopping-cart"></i>
+                    </button>
+                  </li>
+                  <li class="product_options_li">
+                    <button class="product_options_btn">
+                      <i class="fa fa-heart"></i>
+                    </button>
+                  </li>
+                </ul>
               </div>
               <div class="product_wrap_info">
                 <h3 class="product_wrap_info_text1">Nilon RS-X Bold</h3>
@@ -293,6 +359,23 @@
                   <i class="fa fa-star"></i>
                   <p class="point_rating">4.00</p>
                 </div>
+                <ul class="product_options">
+                  <li class="product_options_li">
+                    <button class="product_options_btn">
+                      <i class="fa fa-eye"></i>
+                    </button>
+                  </li>
+                  <li class="product_options_li">
+                    <button class="product_options_btn">
+                      <i class="fa fa-shopping-cart"></i>
+                    </button>
+                  </li>
+                  <li class="product_options_li">
+                    <button class="product_options_btn">
+                      <i class="fa fa-heart"></i>
+                    </button>
+                  </li>
+                </ul>
               </div>
               <div class="product_wrap_info">
                 <h3 class="product_wrap_info_text1">Nilon RS-X Bold</h3>
@@ -315,6 +398,23 @@
                   <i class="fa fa-star"></i>
                   <p class="point_rating">4.00</p>
                 </div>
+                <ul class="product_options">
+                  <li class="product_options_li">
+                    <button class="product_options_btn">
+                      <i class="fa fa-eye"></i>
+                    </button>
+                  </li>
+                  <li class="product_options_li">
+                    <button class="product_options_btn">
+                      <i class="fa fa-shopping-cart"></i>
+                    </button>
+                  </li>
+                  <li class="product_options_li">
+                    <button class="product_options_btn">
+                      <i class="fa fa-heart"></i>
+                    </button>
+                  </li>
+                </ul>
               </div>
               <div class="product_wrap_info">
                 <h3 class="product_wrap_info_text1">Nilon RS-X Bold</h3>
@@ -334,6 +434,23 @@
                   <i class="fa fa-star"></i>
                   <p class="point_rating">4.50</p>
                 </div>
+                <ul class="product_options">
+                  <li class="product_options_li">
+                    <button class="product_options_btn">
+                      <i class="fa fa-eye"></i>
+                    </button>
+                  </li>
+                  <li class="product_options_li">
+                    <button class="product_options_btn">
+                      <i class="fa fa-shopping-cart"></i>
+                    </button>
+                  </li>
+                  <li class="product_options_li">
+                    <button class="product_options_btn">
+                      <i class="fa fa-heart"></i>
+                    </button>
+                  </li>
+                </ul>
               </div>
               <div class="product_wrap_info">
                 <h3 class="product_wrap_info_text1">Nilon RS-X Bold</h3>
@@ -357,7 +474,7 @@
           <img src="Image/anh2.jpg" alt="" class="img" />
         </div>
         <div class="about_wrap_content">
-          <p class="about_wrap_content_text1">ABOUT US</p>
+          <p class="about_wrap_content_text1">ABOUT US <span class="about_wrap_content_text1_bg"></span></p>
           <h1 class="about_wrap_content_h1">
             Our Smart Shoes Will Make Your Life Easier
           </h1>
@@ -464,7 +581,7 @@
     <div class="testimonials_wrap">
       <div class="container">
         <div class="product_wrap_content">
-          <p class="offer_container_info_text1">TESTIMONIALS</p>
+          <p class="offer_container_info_title"> <span class="offer_container_info_text1"> SPECIAL OFFER <span class="about_wrap_content_text1_bg bg2"></span></span></p>
           <h1 class="offer_container_info_h1">Our Customers Feedback</h1>
         </div>
         <div class="testimonials_content">
@@ -556,7 +673,7 @@
     <div class="blog_wrap">
       <div class="container">
         <div class="product_wrap_content">
-          <p class="offer_container_info_text1">LATEST NEWS</p>
+          <p class="offer_container_info_title"> <span class="offer_container_info_text1"> SPECIAL OFFER <span class="about_wrap_content_text1_bg bg2"></span></span></p>
           <h1 class="offer_container_info_h1">Reading Our Blog Content</h1>
           <p class="promo_text_p">
             It is a long established fact that a reader will be distracted by
@@ -568,22 +685,245 @@
             <div class="blog_img">
               <img src="Image/blog1.jpg" alt="blog1" class="blog_img_1" />
             </div>
-            <div class="blog_info"></div>
+            <div class="blog_info">
+              <div class="blog_info_metainfo">
+                <ul class="blog_metainfo">
+                <li>
+                  <i class="fa fa-user"></i>
+                  <a href="a"> Admin</a>
+                  <p>/</p> 
+                </li>
+                </ul>
+                <ul class="blog_metainfo">
+                <li>
+                  <i class="fa fa-comment"></i>
+                  <a href="a" class="blog_metainfo_cmt"> No Comment</a>
+                  <p>/</p> 
+                </li>
+                </ul>
+                <ul class="blog_metainfo">
+                <li>
+                  <i class="fa fa-calendar"></i>
+                  <a href="a"> 01 Nov, 2021</a>
+                </li>
+                </ul>
+              </div>
+              <h3 class="blog_h3">How Can I Buy The Product</h3>
+              <p class="promo_text_p">White in eu mi bibendum neque egestas set cong tincidunt nunc pulvinar sapien</p>
+              <a href="Readmore" class="blog_a">Read More <span><i class="fa fa-arrow-right"></i></i></span><div class="readmore_line"></div></a>
+      
+            </div>
+          
           </div>
           <div class="blog_item">
             <div class="blog_img">
-              <img src="Image/blog1.jpg" alt="blog1" class="blog_img_1" />
+              <img src="Image/blog2.jpg" alt="blog1" class="blog_img_1" />
             </div>
-            <div class="blog_info"></div>
-          </div>
+            <div class="blog_info">
+              <div class="blog_info_metainfo">
+                <ul class="blog_metainfo">
+                <li>
+                  <i class="fa fa-user"></i>
+                  <a href="a"> Admin</a>
+                  <p>/</p> 
+                </li>
+                </ul>
+                <ul class="blog_metainfo">
+                <li>
+                  <i class="fa fa-comment"></i>
+                  <a href="a" class="blog_metainfo_cmt"> No Comment</a>
+                  <p>/</p> 
+                </li>
+                </ul>
+                <ul class="blog_metainfo">
+                <li>
+                  <i class="fa fa-calendar"></i>
+                  <a href="a"> 22 Sep, 2021</a>
+                </li>
+                </ul>
+              </div>
+              <h3 class="blog_h3">How Can I Buy The Product</h3>
+              <p class="promo_text_p">White in eu mi bibendum neque egestas set cong tincidunt nunc pulvinar sapien</p>
+              <a href="Readmore" class="blog_a">Read More <span><i class="fa fa-arrow-right"></i></i></span><div class="readmore_line"></div></a>
+            </div>
+            </div>
+          
           <div class="blog_item">
             <div class="blog_img">
-              <img src="Image/blog1.jpg" alt="blog1" class="blog_img_1" />
+              <img src="Image/blog3.jpg" alt="blog1" class="blog_img_1" />
             </div>
-            <div class="blog_info"></div>
+            <div class="blog_info">
+              <div class="blog_info_metainfo">
+                <ul class="blog_metainfo">
+                <li>
+                  <i class="fa fa-user"></i>
+                  <a href="a"> Admin</a>
+                  <p>/</p> 
+                </li>
+                </ul>
+                <ul class="blog_metainfo">
+                <li>
+                  <i class="fa fa-comment"></i>
+                  <a href="a" class="blog_metainfo_cmt"> No Comment</a>
+                  <p>/</p> 
+                </li>
+                </ul>
+                <ul class="blog_metainfo">
+                <li>
+                  <i class="fa fa-calendar"></i>
+                  <a href="a"> 13 Jul, 2021</a>
+                </li>
+                </ul>
+              </div>
+              <h3 class="blog_h3">How Can I Buy The Product</h3>
+              <p class="promo_text_p">White in eu mi bibendum neque egestas set cong tincidunt nunc pulvinar sapien</p>
+              <a href="Readmore" class="blog_a">Read More <span><i class="fa fa-arrow-right"></i></i></span><div class="readmore_line"></div></a>
+            </div></div>
           </div>
         </div>
       </div>
+    </div>
+    
+    <div class="footer_wrap">
+      <div class="newletter container">
+        <div class="newletter_wrap">
+          <div class="newletter_wrap_item">
+            <div class="newletter_wrap_item_text">
+              <h2 class="newletter_wrap_h2">Subscribe Our Newsletter</h2>
+            </div>
+            <div class="newletter_wrap_item_input">
+              <form action="#" class="newletter_input_form">
+                <input type="email" placeholder="Enter Your Email Address">
+                <button type="submit" class="newletter_btn">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer_content">
+          <div class="footer_widget">
+            <img src="Image/logo-white.png" alt="logo" class="nav_logo" />
+            <p class="footer_p">Lorem ipsum dolor sit amet consec tetur adisoom isotope elit eiusmod temporum incidunt labore dolore magna aliqu core tetur adip iscing eliteous sedun amet adisoom isotope.</p>
+            <div class="social_link">
+              <h5>Follow Us:</h5>
+              <ul class="social_list">
+                <li><i class="fa fa-facebook-f"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+                <li><i class="fa fa-youtube"></i></li>
+                <li><i class="fa fa-instagram"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer_info">
+            <h3 class="footer_info_title">Information</h3>
+            <div class="footer_info_line"></div>
+            <ul class="footer_info_menu">
+              <li class="footer_info_li">
+                <a href="a" class="footer_menu_item">
+                  <i class="fa fa-angle-right"></i>
+                  About Us
+                </a>
+              </li>
+              <li class="footer_info_li">
+                <a href="a" class="footer_menu_item">
+                  <i class="fa fa-angle-right"></i>
+                  Our Shop
+                </a>
+              </li>
+              <li class="footer_info_li">
+                <a href="a" class="footer_menu_item">
+                  <i class="fa fa-angle-right"></i>
+                Contact Us
+                </a>
+              </li>
+              <li class="footer_info_li">
+                <a href="a" class="footer_menu_item">
+                  <i class="fa fa-angle-right"></i>
+                  Refund Policy
+                </a>
+              </li>
+              <li class="footer_info_li">
+                <a href="a" class="footer_menu_item">
+                  <i class="fa fa-angle-right"></i>
+                  Privacy Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer_info">
+            <h3 class="footer_info_title">Account</h3>
+            <div class="footer_info_line"></div>
+            <ul class="footer_info_menu">
+              <li class="footer_info_li">
+                <a href="a" class="footer_menu_item">
+                  <i class="fa fa-angle-right"></i>
+                  My Account
+                </a>
+              </li>
+              <li class="footer_info_li">
+                <a href="a" class="footer_menu_item">
+                  <i class="fa fa-angle-right"></i>
+                  My Orders
+                </a>
+              </li>
+              <li class="footer_info_li">
+                <a href="a" class="footer_menu_item">
+                  <i class="fa fa-angle-right"></i>
+                  Returns
+                </a>
+              </li>
+              <li class="footer_info_li">
+                <a href="a" class="footer_menu_item">
+                  <i class="fa fa-angle-right"></i>
+                  Wishlist
+                </a>
+              </li>
+              <li class="footer_info_li">
+                <a href="a" class="footer_menu_item">
+                  <i class="fa fa-angle-right"></i>
+                  Shipping
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer_getintouch">
+            <h3 class="footer_info_title">Get In Touch</h3>
+            <div class="footer_info_line"></div>
+            <ul class="footer_info_menu">
+              <li class="footer_info_li">
+                <a href="a" class="footer_menu_item">
+                  <i class="fa fa-location-arrow"></i>
+                  <span class="footer_menu_item_span">Location</span>
+                  <p class="footer_menu_item_p">2967 Sunrise Street, New York</p> 
+                </a>
+              </li>
+              <li class="footer_info_li">
+                <a href="a" class="footer_menu_item">
+                  <i class="fa fa-envelope"></i>
+                  <span class="footer_menu_item_span">Email</span>
+                  <p class="footer_menu_item_p">hello@eKom.com</p> 
+                </a>
+              </li>
+              <li class="footer_info_li">
+                <a href="a" class="footer_menu_item">
+                  <i class="fa fa-phone"></i>
+                  <span class="footer_menu_item_span">Phone</span>
+                  <p class="footer_menu_item_p">+1-3454-5678-77</p> 
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <p class="copyright_text">
+      <i class="fa fa-copyright"></i>
+      2022
+      <span class="copyright_text_span">eKom</span>
+      . All Rights Reserved By 
+      <a href="a" class="copyright_text_a">HiBootstrap</a>
+    </p>
+
     </div>
   </body>
 </html>
