@@ -12,7 +12,10 @@
   max-width: 1320px;
   margin: auto;
 }
+ 
 
+
+/* --Start Navigation-bar-- */
 .nav {
   width: 100%;
   top: 0;
@@ -143,6 +146,9 @@ button {
   cursor: pointer;
 }
 
+
+
+/*--Start Carousel--*/
 .carousel {
   background-color: #f9f9f9;
 }
@@ -261,6 +267,9 @@ button {
   right: 120px;
 }
 
+
+
+/*--Start Feature-wrap-- */
 .feature {
   padding-top: 80px;
   padding-bottom: 75px;
@@ -345,6 +354,9 @@ button {
   box-shadow: 35px 35px 0px 0px #ddd;
 }
 
+
+
+/*--Start About-wrap--*/
 .about {
   padding-bottom: 30px;
   margin: auto;
@@ -433,6 +445,9 @@ button {
   -webkit-transition: all 0.3s ease-in-out;
 }
 
+
+
+/*--Start Parter-wrap--*/
 .parter_wrap {
   padding-bottom: 100px;
 }
@@ -453,6 +468,10 @@ button {
   width: 130px;
 }
 
+
+
+
+/*--Start Offer--*/
 .offer {
   background-color: #f9f9f9;
   padding-top: 80px;
@@ -512,6 +531,9 @@ button {
   margin-left: 40px;
 }
 
+
+
+/*--Start Product-Wrap--*/
 .product_wrap {
   padding: 100px 0;
 }
@@ -674,6 +696,9 @@ button {
   cursor: pointer;
 }
 
+
+
+/*--Start Promo-wrap--*/
 .promo_wrap {
   padding-top: 20px;
   padding-bottom: 100px;
@@ -744,6 +769,9 @@ button {
   margin-right: 20px;
 }
 
+
+
+/*--Start Testimonials-wrap--*/
 .testimonials_wrap {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -798,6 +826,9 @@ button {
   border-radius: 50%;
 }
 
+
+
+/*--Start Blog-wrap--*/
 .blog_wrap {
   padding-top: 100px;
   padding-bottom: 150px;
@@ -961,6 +992,9 @@ button {
   -webkit-transition: all 0.3s ease-in-out;
 }
 
+
+
+/*--Start Footer-wrap--*/
 .newletter_wrap {
   background-color: var(--orange);
   margin: 0 40px;
