@@ -855,6 +855,14 @@ button {
   margin: 0 10px;
 }
 
+.blog_item:hover .blog_info{
+  box-shadow: 0 8px 30px rgb(205 148 83 / 10%);
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+
+}
+
 .blog_item:hover .blog_img_1 {
   transform: scale(1.08) rotate(3deg);
   transition: transform 1s;
