@@ -89,9 +89,8 @@ function setOpenCart(isOpen) {
 }
 
 
-function addProductToCart(id, qty) {
+function addProductToCart(id, qty = 1) {
     const isProductInCart = carts.some((item) => item.id === id);
-
     if (isProductInCart) {
         // update
         carts = carts.map((cartItem) => {
@@ -114,18 +113,6 @@ function addProductToCart(id, qty) {
 
     updateCart();
     setOpenCart(true);
-
-    // if (carts.some((item) => item.id === id)) {
-    //     changeinCart("plus", id)
-    // } else {
-    //     const item = products.find((product) => product.id === id);
-    //     carts.push({
-    //         ...item,
-    //         inCart: 1,
-    //     })
-    // }
-    // document.querySelector(".cart").style.display = "block"
-    // updateCart();
 }
 
 function updateCart() {
@@ -153,7 +140,7 @@ function renderTotalCost() {
 function renderCartItems() {
     renderCart.innerHTML = "";
     carts.forEach((item) => {
-        renderCart.innerHTML += `
+            renderCart.innerHTML += `
         <div class="cart_item">
                 <div class="cart_item_action">
                     <div type="button" onclick="removeItemsfromCart(${item.id})" class="detele_cart_item">
@@ -170,11 +157,27 @@ function renderCartItems() {
                     <p class="cart_item_info_p">$${item.discount}.00</p>
                 </div>
                 <div class="unitofcart">
-                <div onclick="changeinCart('minus', ${item.id})"><i class="fa fa-minus"></i></div>
+                <div class="btn_qty"><i class="fa fa-minus" id="minus_${item.id}"></i></div>
                 <span>${item.inCart}</span>
-                <div onclick="changeinCart('plus', ${item.id})"><i class="fa fa-plus"></i></div>
+                <div class="btn_qty"><i class="fa fa-plus" id="plus_${item.id}"></i></div>
                 </div>`
-    })
+        })
+        // listen on click plus-minus
+    const calculate = document.querySelectorAll(".btn_qty")
+    if (calculate) {
+        calculate.forEach(function(btn) {
+            btn.addEventListener("click", function(event) {
+                const type = event.target.id.split("_")[0];
+                const id = parseInt(event.target.id.split("_")[1]);
+                if (type === "plus") {
+                    addProductToCart(id, 1);
+                } else if (type === "minus") {
+                    addProductToCart(id, -1);
+                }
+            });
+        })
+
+    }
 }
 
 // function changeinCart(action, id) {
@@ -209,9 +212,8 @@ function listenEvents() {
 
     const close = document.querySelector(".close_cart")
     close.addEventListener("click", function(event) {
-            setOpenCart(false);
-        })
-        // listen on click cart
+        setOpenCart(false);
+    })
 }
 
 function main() {
