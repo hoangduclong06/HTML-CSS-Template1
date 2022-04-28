@@ -37,6 +37,7 @@ let products = [{
     }
 ]
 
+const removeCart = document.querySelector(".detele_cart_item")
 const renderProduct = document.querySelector(".product_wrap_slide")
 const renderCart = document.querySelector(".cart_body")
 const totalCost = document.querySelector(".cart_footer")
@@ -61,8 +62,8 @@ function renderProducts() {
                                         </button>
                                     </li>
                                     <li class="product_options_li">
-                                        <button class="product_options_btn btn_add_to_cart" id="btn_add_to_cart__${product.id}" onclick ="addProductToCart(${product.id})">
-                                            <i class="fa fa-shopping-cart"></i>
+                                        <button class="product_options_btn btn_add_to_cart" data-id="${product.id}">
+                                            <i class="fa fa-shopping-cart" data-id="${product.id}"></i>
                                         </button>
                                     </li>
                                     <li class="product_options_li">
@@ -89,6 +90,7 @@ function setOpenCart(isOpen) {
 }
 
 
+
 function addProductToCart(id, qty = 1) {
     const isProductInCart = carts.some((item) => item.id === id);
     if (isProductInCart) {
@@ -102,22 +104,26 @@ function addProductToCart(id, qty = 1) {
             }
             return cartItem;
         })
+
+
     } else {
         const item = products.find((product) => product.id === id);
-
         carts.push({
             ...item,
             inCart: qty,
         })
     }
+    carts = carts.filter(i => i.inCart !== 0)
+
 
     updateCart();
     setOpenCart(true);
 }
 
+
+
 function updateCart() {
     renderCartItems()
-    renderTotalCost()
     localStorage.setItem('cart', JSON.stringify(carts))
 }
 
@@ -140,10 +146,10 @@ function renderTotalCost() {
 function renderCartItems() {
     renderCart.innerHTML = "";
     carts.forEach((item) => {
-            renderCart.innerHTML += `
+        renderCart.innerHTML += `
         <div class="cart_item">
                 <div class="cart_item_action">
-                    <div type="button" onclick="removeItemsfromCart(${item.id})" class="detele_cart_item">
+                    <div type="button" onclick="removeItemsfromCart(${item.id})" class="detele_cart_item_${item.id}">
                         <p style="font-size: 16px; font-weight: 300; color: #fff; text-align: center;">x</p>
                     </div>
                 </div>
@@ -161,8 +167,7 @@ function renderCartItems() {
                 <span>${item.inCart}</span>
                 <div class="btn_qty"><i class="fa fa-plus" id="plus_${item.id}"></i></div>
                 </div>`
-        })
-        // listen on click plus-minus
+    })
     const calculate = document.querySelectorAll(".btn_qty")
     if (calculate) {
         calculate.forEach(function(btn) {
@@ -178,28 +183,12 @@ function renderCartItems() {
         })
 
     }
+
+    renderTotalCost();
 }
 
-// function changeinCart(action, id) {
-//     carts = carts.map((item) => {
-//         let inCart = item.inCart;
-
-//         if (item.id === id) {
-//             if (action === 'minus' && inCart > 1) {
-//                 inCart--;
-//             } else if (action === 'plus') {
-//                 inCart++;
-//             }
-//         }
-//         return {
-//             ...item,
-//             inCart
-//         }
-//     })
-//     updateCart()
-// }
-
 function removeItemsfromCart(id) {
+
     carts = carts.filter((item) => item.id !== id)
     updateCart()
 }
@@ -214,6 +203,7 @@ function listenEvents() {
     close.addEventListener("click", function(event) {
         setOpenCart(false);
     })
+
 }
 
 function main() {
@@ -223,3 +213,19 @@ function main() {
 }
 
 main();
+
+const addCart = document.querySelectorAll(".btn_add_to_cart")
+console.log(addCart);
+if (addCart.length > 0) {
+    console.log(111)
+    addCart.forEach(function(btn) {
+        btn.addEventListener("click", function(e) {
+            console.log(e.target)
+            const id = parseInt(e.target.getAttribute("data-id"));
+            console.log(id)
+            if (id) {
+                addProductToCart(id);
+            }
+        })
+    })
+}
