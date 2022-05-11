@@ -37,7 +37,6 @@ let products = [{
     }
 ]
 
-const removeCart = document.querySelector(".detele_cart_item")
 const renderProduct = document.querySelector(".product_wrap_slide")
 const renderCart = document.querySelector(".cart_body")
 const totalCost = document.querySelector(".cart_footer")
@@ -148,9 +147,9 @@ function renderCartItems() {
     carts.forEach((item) => {
         renderCart.innerHTML += `
         <div class="cart_item">
-                <div class="cart_item_action">
-                    <div type="button" onclick="removeItemsfromCart(${item.id})" class="detele_cart_item_${item.id}">
-                        <p style="font-size: 16px; font-weight: 300; color: #fff; text-align: center;">x</p>
+                <div class="cart_item_action" >
+                    <div type="button"  onclick="removeItemsfromCart(${item.id})" class="detele_cart_item" data-id="${item.id}">
+                        <p data-id="${item.id}" style="font-size: 16px; font-weight: 300; color: #fff; text-align: center;">x</p>
                     </div>
                 </div>
                 <div class="cart_item_img">
@@ -187,11 +186,10 @@ function renderCartItems() {
     renderTotalCost();
 }
 
-function removeItemsfromCart(id) {
 
-    carts = carts.filter((item) => item.id !== id)
-    updateCart()
-}
+
+
+
 
 function listenEvents() {
     const open = document.querySelector(".nav_btn_shop")
@@ -203,7 +201,37 @@ function listenEvents() {
     close.addEventListener("click", function(event) {
         setOpenCart(false);
     })
+    const addCart = document.querySelectorAll(".btn_add_to_cart")
+    if (addCart.length > 0) {
+        addCart.forEach(function(btn) {
+            btn.addEventListener("click", function(e) {
+                const id = parseInt(e.target.getAttribute("data-id"));
+                if (id) {
+                    addProductToCart(id);
+                }
+            })
+        })
+    }
 
+    // const removeCart = document.querySelectorAll(".detele_cart_item")
+    // console.log(removeCart);
+    // if (removeCart) {
+    //     removeCart.forEach(function(btn) {
+    //         btn.addEventListener("click", function(e) {
+    //             const id = parseInt(e.target.getAttribute("data-id"));
+    //             if (id) {
+    //                 removeItemsfromCart(id);
+    //             }
+    //         })
+    //     })
+    // }
+
+}
+
+function removeItemsfromCart(id) {
+
+    carts = carts.filter((item) => item.id !== id)
+    updateCart()
 }
 
 function main() {
@@ -211,21 +239,4 @@ function main() {
     updateCart();
     listenEvents();
 }
-
 main();
-
-const addCart = document.querySelectorAll(".btn_add_to_cart")
-console.log(addCart);
-if (addCart.length > 0) {
-    console.log(111)
-    addCart.forEach(function(btn) {
-        btn.addEventListener("click", function(e) {
-            console.log(e.target)
-            const id = parseInt(e.target.getAttribute("data-id"));
-            console.log(id)
-            if (id) {
-                addProductToCart(id);
-            }
-        })
-    })
-}

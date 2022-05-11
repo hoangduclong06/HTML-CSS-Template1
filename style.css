@@ -377,9 +377,9 @@ button {
 .feature {
     padding-top: 80px;
     padding-bottom: 75px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-border-top: 1px solid rgba(0, 0, 0, 0.1);
 .container {
     max-width: 1320px;
     margin: auto;
