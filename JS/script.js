@@ -2,7 +2,7 @@ let carts = JSON.parse(localStorage.getItem('cart') || "[]");
 let products = [{
         id: 1,
         name: 'Nilon RS-X Bold 1',
-        img: 'Image/productshoes1.png',
+        img: '../Image/productshoes1.png',
         rating: '4.00',
         price: 150,
         discount: 128,
@@ -11,7 +11,7 @@ let products = [{
     {
         id: 2,
         name: 'Nilon RS-X Bold 2',
-        img: 'Image/productshoes2.png',
+        img: '../Image/productshoes2.png',
         rating: '4.00',
         price: 150,
         discount: 138,
@@ -20,7 +20,7 @@ let products = [{
     {
         id: 3,
         name: 'Nilon RS-X Bold 3',
-        img: 'Image/productshoes3.png',
+        img: '../Image/productshoes3.png',
         rating: '4.00',
         price: 170,
         discount: 148,
@@ -29,7 +29,7 @@ let products = [{
     {
         id: 4,
         name: 'Nilon RS-X Bold 4',
-        img: 'Image/productshoes4.png',
+        img: '../Image/productshoes4.png',
         rating: 4.5,
         price: 180,
         discount: 158,
@@ -41,6 +41,7 @@ const renderProduct = document.querySelector(".product_wrap_slide")
 const renderCart = document.querySelector(".cart_body")
 const totalCost = document.querySelector(".cart_footer")
 const numberinCart = document.querySelector(".cart_number")
+const login = document.querySelector(".nav_btn_login")
 
 function renderProducts() {
     products.forEach((product) => {
@@ -212,6 +213,8 @@ function listenEvents() {
             })
         })
     }
+
+
 
     // const removeCart = document.querySelectorAll(".detele_cart_item")
     // console.log(removeCart);
